@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+body {
+  background-color: $main-light-color;
+  color: $main-color;
+  letter-spacing: $primary-letter-spacing;
+  font-family: $primaty-font-family;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+.container {
+  padding: 0 15px;
+
+  @media screen and (min-width:#{$mobile-width}) {
+    width: $mobile-width;
+  }
+
+  @media screen and (min-width:#{$tablet-width}) {
+    width: $tablet-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width:#{$desktop-width}) {
+    width: $desktop-width;
+  }
+}
+// .section {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }

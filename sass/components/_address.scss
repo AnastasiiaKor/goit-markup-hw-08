@@ -1,0 +1,34 @@
+.address__list {
+  @extend %list;
+  font-style: normal;
+  font-family: $primaty-font-family;
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__map {
+  display: inline-block;
+
+  @extend %link;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $main-light-color;
+  transition: color 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.address__contact {
+  @extend %link;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

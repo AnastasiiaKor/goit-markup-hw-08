@@ -1,0 +1,31 @@
+@media screen and (max-width:calc(#{$tablet-width} - 1px)) {
+  .navigation__list {
+    display: none;
+  }
+}
+
+// .navigation {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+// .navigation__list {
+//   display: flex;
+//   @extend %list;
+// }
+// .navigation__item:not(:last-child) {
+//   margin-right: 50px;
+// }
+// .navigation__link {
+//   @extend %link;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
+//   color: $title-color;
+//   transition: color 250ms $transition-timing-function;
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+// }

@@ -1,0 +1,46 @@
+.team {
+  background-color: #f5f4fa;
+}
+.team__title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: $title-color;
+}
+.team__list {
+  display: flex;
+  margin-left: calc(-1 * #{$list-gap});
+  @extend %list;
+}
+.member-card {
+  margin-left: $list-gap;
+  flex-basis: calc(100% / 4 - #{$list-gap});
+
+  background-color: $main-light-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.member-card__info {
+  padding-top: $list-gap;
+  padding-bottom: $list-gap;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.member-card__name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: $title-color;
+}
+.member-card__position {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,213 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms $transition-timing-function;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms $transition-timing-function 100ms;
+
+  padding: 40px;
+  width: 528px;
+  background-color: $main-light-color;
+
+  .backdrop--is-hidden & {
+    transform: translate(-50%, 50%) scale(1.2);
+  }
+}
+.modal__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: $title-color;
+}
+.form__input,
+.form__textarea,
+.form__label {
+  display: block;
+}
+
+.form__label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.form__field {
+  position: relative;
+  margin-bottom: 10px;
+}
+.form__input {
+  padding-left: 42px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 44px;
+  transition: border 250ms $transition-timing-function;
+
+  &:focus,
+  &:hover {
+    @include border($accent-color);
+    outline: none;
+  }
+}
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms $transition-timing-function;
+}
+
+.form__input:focus + .form__icon,
+.form__input:hover + .form__icon {
+  fill: $accent-color;
+}
+
+.form__textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    transition: border 250ms $transition-timing-function;
+  }
+  &:hover {
+    @include border($accent-color);
+  }
+  &:focus {
+    @include border($accent-color);
+    outline: none;
+  }
+}
+.form__btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 52px;
+  background-color: $accent-color;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: $main-light-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: $seconday-letter-spacing;
+  cursor: pointer;
+
+  transition: background-color 250ms$transition-timing-function;
+
+  &:hover {
+    background-color: #188ce8;
+  }
+  &:focus {
+    background-color: #188ce8;
+    text-decoration: none;
+  }
+}
+.agreement {
+  position: relative;
+  padding-left: 37px;
+}
+.agreement__label {
+  display: block;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: $primary-letter-spacing;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+.agreement__checkbox {
+  appearance: none;
+}
+.agreement__icon-check,
+.agreement__icon-empty {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 250ms $transition-timing-function, fill 250ms $transition-timing-function;
+}
+.agreement__icon-empty {
+  fill: #000000;
+}
+.agreement__icon-check {
+  opacity: 0;
+
+  .agreement__checkbox:checked + & {
+    opacity: 1;
+  }
+}
+.agreement__icon-empty {
+  .agreement__checkbox:checked ~ & {
+    opacity: 0;
+  }
+  .agreement__checkbox:focus ~ & {
+    fill: $accent-color;
+  }
+  .agreement__checkbox:checked ~ & {
+    fill: $accent-color;
+  }
+}
+.agreement__terms {
+  color: $accent-color;
+  &:hover,
+  &:focus {
+    @extend %link;
+  }
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: $main-light-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.close-btn__icon {
+  transition: fill 250ms $transition-timing-function;
+
+  .close-btn:hover &,
+  .close-btn:focus & {
+    fill: $accent-color;
+  }
+}

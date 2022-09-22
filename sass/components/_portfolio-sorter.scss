@@ -1,0 +1,39 @@
+.sorter {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 34px;
+  padding-left: 0;
+  @extend %list;
+}
+.sorter__item:not(:last-child) {
+  margin-right: 8px;
+}
+.sorter__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  background: #f5f4fa;
+  padding: 6px 22px;
+  border-radius: 4px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: color 250ms $transition-timing-function,
+    background-color 250ms $transition-timing-function, box-shadow 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $main-light-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+.sorter__button--active {
+  color: $main-light-color;
+  background-color: $accent-color;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
