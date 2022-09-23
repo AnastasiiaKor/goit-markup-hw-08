@@ -3,7 +3,7 @@
   text-decoration: none;
   font-family: $seconday-font-family;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   color: #000;
 }
@@ -11,13 +11,18 @@
   color: $accent-color;
 }
 
-.logo--secondary {
-  display: inline-block;
-  margin-bottom: 20px;
-}
+// .logo--secondary {
+//   display: inline-block;
+//   margin-bottom: 20px;
+// }
 .logo--white {
   color: $main-light-color;
 }
 // .logo--primary {
 //   margin-right: 93px;
 // }
+@media screen and (min-width: $desktop-width) {
+  .logo {
+    font-size: 26px;
+  }
+}

@@ -339,12 +339,25 @@ ul {
   .menu-open-button {
     display: none;
   }
+  .page-header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-header__container {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 .logo {
   text-decoration: none;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   color: #000;
 }
@@ -353,15 +366,15 @@ ul {
   color: #2196f3;
 }
 
-.logo--secondary {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
 .logo--white {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: calc(768px - 1px)) {
   .mobile-menu {
     position: fixed;
@@ -404,7 +417,7 @@ ul {
     list-style: none;
   }
   .mobile-menu__navigation-list {
-    margin-bottom: 302px;
+    margin-bottom: calc(100vh - 496px);
   }
   .mobile-menu__navigation-item:not(:last-child),
 .mobile-menu__contacts-item:first-child {
@@ -444,8 +457,10 @@ ul {
     display: -ms-flexbox;
     display: flex;
   }
-  .mobile-menu__socials-item:not(:last-child) {
+  .mobile-menu__socials-item {
     padding-right: 10px;
+  }
+  .mobile-menu__socials-item:not(:last-child) {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
   .mobile-menu__socials-item:not(:first-child) {
@@ -466,9 +481,110 @@ ul {
     display: none;
   }
 }
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin-left: 87px;
+  }
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navigation__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .navigation__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #212121;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation__link:hover, .navigation__link:focus {
+    color: #2196f3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation__list {
+    margin-left: 92px;
+  }
+}
 @media screen and (max-width: calc(768px - 1px)) {
   .contacts__list {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__list {
+    list-style: none;
+    margin-left: auto;
+  }
+  .contacts__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contacts__link:hover, .contacts__link:focus {
+    color: #2196f3;
+  }
+  .contacts__icon {
+    fill: #757575;
+    margin-right: 10px;
+    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contacts__link:hover .contacts__icon, .contacts__link:focus .contacts__icon {
+    fill: currentColor;
+  }
+}
+@media screen and (max-width: calc(1200px - 1px)) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .contacts__link {
+    font-size: 14px;
+  }
+  .contacts__icon--first {
+    width: 16px;
+    height: 12px;
+  }
+  .contacts__icon--second {
+    width: 10px;
+    height: 16px;
   }
 }
 .navigation__link--current {

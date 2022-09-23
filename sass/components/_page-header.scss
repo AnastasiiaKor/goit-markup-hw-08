@@ -25,8 +25,19 @@
     fill: $title-color;
   }
 }
-@media screen and (min-width: #{$tablet-width}) {
+@media screen and (min-width: $tablet-width) {
   .menu-open-button {
     display: none;
+  }
+  .page-header__container {
+    display: flex;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: $desktop-width) {
+  .page-header__container {
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
