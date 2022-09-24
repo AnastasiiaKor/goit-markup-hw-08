@@ -17,6 +17,8 @@ ul {
 }
 .container {
   padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (min-width:#{$mobile-width}) {
     width: $mobile-width;
@@ -32,7 +34,12 @@ ul {
     width: $desktop-width;
   }
 }
-// .section {
-//   padding-top: 94px;
-//   padding-bottom: 94px;
-// }
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}

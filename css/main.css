@@ -265,6 +265,8 @@ ul {
 
 .container {
   padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -281,6 +283,17 @@ ul {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -310,15 +323,15 @@ ul {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
 }
-@media screen and (max-width: calc(768px - 1px)) {
-  .page-header {
-    position: relative;
-  }
-}
 
 .page-header__container {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .page-header__container {
+    position: relative;
+  }
 }
 
 @media screen and (max-width: calc(768px - 1px)) {
@@ -993,18 +1006,21 @@ ul {
   fill: #2196f3;
 }
 
-.advantages__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: calc(-1 * 30px);
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
-.advantages__item {
-  margin-left: 30px;
-  -ms-flex-preferred-size: calc(100% / 4 - 30px);
-      flex-basis: calc(100% / 4 - 30px);
-}
 .advantages__item::before {
   content: "";
   display: block;
@@ -1014,6 +1030,23 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (max-width: calc(768px - 1px)) {
+  .advantages__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1200px - 1px)) {
+  .advantages__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 4);
+        flex-basis: calc((100% - 30px) / 4);
+  }
+}
 
 .advantages__subtitle {
   margin-top: 30px;
@@ -1022,6 +1055,12 @@ ul {
   line-height: 1.42;
   text-transform: uppercase;
   color: #212121;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .advantages__subtitle {
+    text-align: start;
+  }
 }
 
 .advantages__text {
@@ -1046,6 +1085,11 @@ ul {
   background-image: url(../images/icons/astronaut.svg);
 }
 
+@media screen and (max-width: calc(1200px - 1px)) {
+  .specialization {
+    display: none;
+  }
+}
 .specialization {
   padding-top: 0;
 }

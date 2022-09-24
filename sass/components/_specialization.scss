@@ -1,3 +1,9 @@
+@media screen and (max-width:calc(#{$desktop-width} - 1px)) {
+  .specialization {
+    display: none;
+  }
+}
+
 .specialization {
   padding-top: 0;
 }
