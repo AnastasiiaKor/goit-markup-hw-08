@@ -1,7 +1,7 @@
 .address__list {
   @extend %list;
   font-style: normal;
-  font-family: $primaty-font-family;
+  font-family: $primary-font-family;
 }
 .address__item:not(:last-child) {
   margin-bottom: 9px;
