@@ -1,17 +1,34 @@
 .clients__title {
-  margin-bottom: 50px;
-  font-size: 36px;
+  margin-bottom: $list-gap;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: $title-color;
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 .clients__list {
   display: flex;
   gap: $list-gap;
   @extend %list;
+
+  @media screen and (max-width: calc(#{$desktop-width} - 1px)) {
+    flex-wrap: wrap;
+  }
 }
 .clients__item {
-  flex-basis: calc((100% - 150px) / 6);
+  flex-basis: calc((100% - $list-gap) / 2);
+
+  @media screen and (min-width:$tablet-width) and (max-width: calc(#{$desktop-width} - 1px)) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    flex-basis: calc((100% - 150px) / 6);
+  }
 }
 .clients__link {
   display: flex;

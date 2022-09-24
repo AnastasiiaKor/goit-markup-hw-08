@@ -31,7 +31,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    flex-basis: calc((100% - $list-gap) / 4);
+    flex-basis: calc((100% - 90px) / 3);
   }
 }
 .advantages__subtitle {
