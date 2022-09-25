@@ -5,6 +5,12 @@
   padding: 0;
   @extend %list;
 }
+
+@media screen and (min-width: $tablet-width) {
+  .subscription__socials {
+    justify-content: start;
+  }
+}
 .socials__item:not(:last-child) {
   margin-right: 10px;
 }

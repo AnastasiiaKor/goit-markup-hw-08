@@ -4,10 +4,17 @@
     margin-bottom: 60px;
   }
 }
+@media screen and (min-width: $desktop-width) {
+  .subscription--following {
+    margin-left: 70px;
+  }
+}
 
-// .subscription--general {
-//   outline: 1px solid red;
-// }
+@media screen and (min-width:$tablet-width) and (max-width: calc(#{$desktop-width} - 1px)) {
+  .subscription--general {
+    margin-top: 60px;
+  }
+}
 .subscription__title {
   font-weight: 700;
   font-size: 14px;
@@ -16,16 +23,13 @@
 
   color: #ffffff;
   margin-bottom: 20px;
-
-  @media screen and (max-width: calc(#{$tablet-width} - 1px)) {
-    text-align: center;
-  }
 }
 .subscription__form {
   display: flex;
 
-  @media screen and (max-width: calc(#{$tablet-width} - 1px)) {
+  @media screen and (max-width: calc(#{$desktop-width} - 1px)) {
     flex-direction: column;
+    align-items: center;
   }
 }
 .subscription__input {
@@ -45,18 +49,28 @@
     letter-spacing: $primary-letter-spacing;
     color: rgba(255, 255, 255, 0.6);
   }
-  @media screen and (max-width: calc(#{$tablet-width} - 1px)) {
-    margin-bottom: 20px;
+  @media screen and (max-width: calc(#{$desktop-width} - 1px)) {
+    & {
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: $tablet-width) {
+    & {
+      width: 450px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    & {
+      width: 358px;
+      margin-right: 12px;
+    }
   }
 }
 
 .subscription__btn {
   display: flex;
   align-items: center;
-
-  @media screen and (max-width: calc(#{$tablet-width} - 1px)) {
-    align-self: center;
-  }
 
   max-width: 200px;
   padding: 10px 28px;

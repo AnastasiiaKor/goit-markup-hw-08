@@ -6,10 +6,16 @@
 .address__item.address__item:nth-child(2n) {
   margin-top: 8px;
   margin-bottom: 5px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 9px;
+    margin-top: 9px;
+  }
 }
 .address__map {
-  // display: inline-block;
-
   @extend %link;
   font-size: 14px;
   line-height: 1.71;
