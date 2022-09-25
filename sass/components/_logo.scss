@@ -11,10 +11,13 @@
   color: $accent-color;
 }
 
-// .logo--secondary {
-//   display: inline-block;
-//   margin-bottom: 20px;
-// }
+@media screen and (max-width:calc(#{$desktop-width} - 1px)) {
+  .logo--secondary {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+
 .logo--white {
   color: $main-light-color;
 }

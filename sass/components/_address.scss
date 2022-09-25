@@ -3,11 +3,12 @@
   font-style: normal;
   font-family: $primary-font-family;
 }
-.address__item:not(:last-child) {
-  margin-bottom: 9px;
+.address__item.address__item:nth-child(2n) {
+  margin-top: 8px;
+  margin-bottom: 5px;
 }
 .address__map {
-  display: inline-block;
+  // display: inline-block;
 
   @extend %link;
   font-size: 14px;

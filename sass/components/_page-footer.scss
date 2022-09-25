@@ -4,6 +4,9 @@
   background-color: $footer-backgroung-color;
 }
 .page-footer__container {
-  display: flex;
-  align-items: baseline;
+  @media screen and (max-width: calc(#{$tablet-width} - 1px)) {
+    text-align: center;
+  }
+  //   display: flex;
+  //   align-items: baseline;
 }
