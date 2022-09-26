@@ -27,8 +27,10 @@
 }
 
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
+  height: 100%;
   transition: box-shadow 250ms $transition-timing-function;
   overflow: hidden;
   &:hover,
@@ -39,8 +41,6 @@
 }
 .card__thumb {
   position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   overflow: hidden;
 }
