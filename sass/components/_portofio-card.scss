@@ -1,16 +1,30 @@
 .card-list {
   @extend %list;
-  // padding-left: 0;
-  // display: flex;
-  // flex-wrap: wrap;
-  // margin-top: calc(-1 * #{$list-gap});
-  // margin-left: calc(-1 * #{$list-gap});
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  display: flex;
+  flex-wrap: wrap;
 }
-// .card-list__item {
-//   margin-top: $list-gap;
-//   margin-left: $list-gap;
-//   flex-basis: calc(100% / 3 - #{$list-gap});
-// }
+@media screen and (max-width:calc(#{$tablet-width} - 1px)) {
+  .card-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: $tablet-width) and (max-width:calc(#{$desktop-width} - 1px)) {
+  .card-list__item {
+    flex-basis: calc((100% - $list-gap) / 2);
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .card-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
 
 .card {
   display: block;
