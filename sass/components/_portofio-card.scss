@@ -1,16 +1,16 @@
 .card-list {
   @extend %list;
-  padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * #{$list-gap});
-  margin-left: calc(-1 * #{$list-gap});
+  // padding-left: 0;
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-top: calc(-1 * #{$list-gap});
+  // margin-left: calc(-1 * #{$list-gap});
 }
-.card-list__item {
-  margin-top: $list-gap;
-  margin-left: $list-gap;
-  flex-basis: calc(100% / 3 - #{$list-gap});
-}
+// .card-list__item {
+//   margin-top: $list-gap;
+//   margin-left: $list-gap;
+//   flex-basis: calc(100% / 3 - #{$list-gap});
+// }
 
 .card {
   display: block;
