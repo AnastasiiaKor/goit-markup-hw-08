@@ -62,14 +62,14 @@
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero-768.jpg);
+      url(../images/Hero-768.jpg);
   }
   @media screen and (min-device-pixel-ratio: 2) and (max-width:calc(#{$desktop-width} - 1px)), 
   screen and (min-resolution: 192dpi) and (max-width:calc(#{$desktop-width} - 1px)),
   screen and (min-resolution: 2dppx) and (max-width:calc(#{$desktop-width} - 1px)) {
     .overlay {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero-768@2x.jpg);
+        url(../images/Hero-768@2x.jpg);
     }
   }
 }
@@ -84,14 +84,14 @@
 
   .overlay {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero-1200.jpg);
+      url(../images/Hero-1200.jpg);
   }
   @media screen and (min-device-pixel-ratio: 2) and (min-width: $desktop-width),
     screen and (min-resolution: 192dpi) and (min-width: $desktop-width),
     screen and (min-resolution: 2dppx) and (min-width: $desktop-width) {
     .overlay {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero-1200@2x.jpg);
+        url(../images/Hero-1200@2x.jpg);
     }
   }
 }
