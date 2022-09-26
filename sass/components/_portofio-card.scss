@@ -39,7 +39,8 @@
 }
 .card__thumb {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   overflow: hidden;
 }
@@ -48,6 +49,7 @@
   max-width: 100%;
 }
 .card__description {
+  flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
