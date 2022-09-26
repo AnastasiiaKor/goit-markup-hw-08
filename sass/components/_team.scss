@@ -48,6 +48,10 @@
 .member-card__info {
   padding-top: $list-gap;
   padding-bottom: 24px;
+
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: $list-gap;
+  }
 }
 .member-card__name {
   margin-bottom: 10px;

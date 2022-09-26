@@ -26,12 +26,12 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   min-width: 216px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 0;
   border-radius: 4px;
   padding: 10px 24px;
   text-align: center;
   margin-top: 30px;
+  cursor: pointer;
 
   transition: background-color 250ms $transition-timing-function;
 
@@ -41,12 +41,12 @@
   }
 }
 .overlay {
-  min-height: 400px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-480.jpg);
   background-color: #c4c4c4;
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 1600px;
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width:calc(#{$tablet-width} - 1px)), 
@@ -59,7 +59,6 @@
 }
 @media screen and(min-width:$tablet-width) {
   .overlay {
-    max-width: 768px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -84,8 +83,6 @@
   }
 
   .overlay {
-    min-height: 600px;
-    max-width: 1600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-1200.jpg);
   }

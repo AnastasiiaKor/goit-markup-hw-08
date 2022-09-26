@@ -13,14 +13,21 @@
     align-items: baseline;
   }
 }
-@media screen and (min-width: $tablet-width) {
-  .flexing-container {
-    display: flex;
+.flexing-container {
+  display: flex;
+
+  @media screen and (max-width: calc(#{$desktop-width} - 1px)) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (max-width: calc(#{$tablet-width} - 1px)) {
+    flex-direction: column;
+    gap: 60px;
+  }
+  @media screen and (min-width: $tablet-width) {
     align-items: baseline;
   }
-}
-@media screen and (min-width:$tablet-width) and (max-width:calc(#{$desktop-width} - 1px)) {
-  .flexing-container {
+  @media screen and (min-width:$tablet-width) and (max-width:calc(#{$desktop-width} - 1px)) {
     justify-content: space-around;
     text-align: center;
   }

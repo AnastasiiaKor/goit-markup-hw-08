@@ -1,20 +1,9 @@
-@media screen and (max-width: calc(#{$tablet-width} - 1px)) {
-  .subscription--following {
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-}
 @media screen and (min-width: $desktop-width) {
   .subscription--following {
     margin-left: 70px;
   }
 }
 
-@media screen and (min-width:$tablet-width) and (max-width: calc(#{$desktop-width} - 1px)) {
-  .subscription--general {
-    margin-top: 60px;
-  }
-}
 .subscription__title {
   font-weight: 700;
   font-size: 14px;
@@ -77,6 +66,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: $secondary-letter-spacing;
   color: $main-light-color;
   background-color: $accent-color;
   border-radius: 4px;
