@@ -1,6 +1,7 @@
 @media screen and (max-width:calc(#{$tablet-width} - 1px)) {
   .mobile-menu {
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100%;
